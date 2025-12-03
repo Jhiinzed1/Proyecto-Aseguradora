@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Seguros</title>
+</head>
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Seguros</a>
+    </div>
+</nav>
+
+<body>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Crear una nueva Poliza</h3>
+                </div>
+                <div class="card-body">
+                    <form id="crearPolizaForm">
+                        <div class="mb-3">
+                            <label for="FechaInicio" class="form-label">Fecha Inicio:</label>
+                            <input type="date" class="form-control" id="FechaInicio" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="FechaFin" class="form-label">Fecha Fin:</label>
+                            <input type="date" class="form-control" id="FechaFin" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="idCliente" class="form-label">Cliente:</label>
+                            <input type="text" class="form-control" id="idCliente" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="tipoPoliza" class="form-label">Tipos de Poliza:</label>
+                            <div class="input-group">
+                                <select class="form-select" id="tipoPoliza" required>
+                                    <option value="" disabled selected>Seleccione un tipo...</option>
+
+                                </select>
+                                <a href="/tipos-poliza" class="btn btn-outline-secondary">Gestionar Tipos</a>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="idBienAsegurado" class="form-label">Bien Asegurado (Descripción):</label>
+                            <input type="text" class="form-control" id="idBienAsegurado" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="valorBien" class="form-label">Valor del Bien:</label>
+                            <input type="number" class="form-control" id="valorBien" step="0.01" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Guardar Poliza</button>
+                        <a href="/pagos" class="btn btn-secondary ms-2">Gestionar Pagos</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-12">
+            <h2>Lista de Polizas</h2>
+            <div id="alertNoPolizas" class="alert alert-info" style="display: none;">
+                No hay polizas registradas.
+            </div>
+            <div id="tablaPolizasContainer">
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th>Cliente</th>
+                            <th>Tipo de Poliza</th>
+                            <th>Bien Asegurado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="polizasBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="js/seguros.js?v=4"></script>
+</body>
+
+</html>
