@@ -1,0 +1,1 @@
+Sistema de Gestion creado principalmente con JAVA y SpringBoot para el backend y HTML5, Bootstrap, Vanilla JavaScript y Thymeleaf para el frontend, consumo de APIs tanto con Fetch como con Axios y una base de datos creada con JPA Hibernate.
