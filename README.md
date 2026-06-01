@@ -183,34 +183,4 @@ El sistema incluye una interfaz gráfica minimalista y responsive basada en plan
     *   Formulario de registro de pagos con autocompletado interactivo: al seleccionar una póliza, el campo `Monto` se completa de forma automática con el precio base correspondiente.
     *   Listado general de los pagos realizados en el sistema con visualización de estado, método de pago, póliza y cliente asociado.
 
----
 
-## 🚀 Cómo Subir este Proyecto a GitHub
-
-Si deseas subir este proyecto a un repositorio propio en GitHub, puedes seguir estos comandos desde la terminal dentro de la carpeta raíz del proyecto:
-
-1.  **Inicializar Git** (si aún no está inicializado):
-    ```bash
-    git init
-    ```
-2.  **Agregar todos los archivos** al área de preparación (staging):
-    ```bash
-    git add .
-    ```
-3.  **Hacer tu primer Commit**:
-    ```bash
-    git commit -m "Initial commit: Proyecto Seguros levantado y documentado"
-    ```
-4.  **Configurar la rama principal**:
-    ```bash
-    git branch -M main
-    ```
-5.  **Vincular con tu Repositorio Remoto**:
-    *(Reemplaza `<TU_USUARIO>` y `<TU_REPOSITORIO>` con tus datos reales)*
-    ```bash
-    git remote add origin https://github.com/<TU_USUARIO>/<TU_REPOSITORIO>.git
-    ```
-6.  **Subir el código**:
-    ```bash
-    git push -u origin main
-    ```
